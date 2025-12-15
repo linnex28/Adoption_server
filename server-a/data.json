@@ -6,7 +6,7 @@
     "age": 2,
     "breed": "Bengali",
     "description": "Iloinen ja leikkisä kissa. Soveltuu rauhalliseen kotiin.",
-    "imageUrl": "xxx",
+    "imageUrl": "https://basepaws.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fqj2yxv39d6ig%2F4Sz2RNDS3EF7i5TmMYrZXv%2F8dc5950086ae878ac844632153e74224%2Ffree-photo-of-close-up-of-a-bengal-cat.jpeg&w=1080&q=75",
     "status": "Saatavilla"
   },
   {
@@ -16,117 +16,47 @@
     "age": 9,
     "breed": "Labradorinnoutaja",
     "description": "Rauhallinen vanhempi herra, nauttii pitkistä kävelyistä ja rapsutuksista. Ei sovellu pieniin asuntoihin.",
-    "imageUrl": "xxx",
+    "imageUrl": "https://images.cdn.yle.fi/image/upload/ar_0.7494145199063232,c_fill,g_faces,h_1601,w_1200/dpr_1.0/q_auto:eco/f_auto/fl_lossy/v1699293233/39-11967176549278500b2c",
     "status": "Saatavilla"
   },
   {
     "id": "a3",
-    "name": "Tikru",
-    "type": "Kissa",
-    "age": 1,
-    "breed": "Ocicat",
-    "description": "Hyvin sosiaalinen ja utelias nuori kissa, tarvitsee toisen kissan kaveriksi.",
-    "imageUrl": "xxx",
-    "status": "Varattu"
-  },
-  {
-    "id": "a4",
-    "name": "Alec",
-    "type": "Koira",
-    "age": 2,
-    "breed": "Bordercollie",
-    "description": "Erittäin energinen, tarvitsee paljon aktiviteetteja ja paimennustyötä. Vaatii kokeneen omistajan.",
-    "imageUrl": "xxx",
-    "status": "Saatavilla"
-  },
-  {
-    "id": "a5",
     "name": "Mimi",
     "type": "Lintu",
     "age": 5,
     "breed": "Harmaapapukaija",
     "description": "Älykäs ja puhelias lintu, tarvitsee paljon tilaa ja virikkeitä.",
-    "imageUrl": "xxx",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Psittacus_erithacus_qtl1.jpg/250px-Psittacus_erithacus_qtl1.jpg",
     "status": "Saatavilla"
   },
   {
-    "id": "a6",
-    "name": "Sonya",
-    "type": "Kissa",
-    "age": 12,
-    "breed": "Persialainen",
-    "description": "Sydämellinen seniori, joka haluaa vain nukkua ja syödä. Erinomainen sylikissa.",
-    "imageUrl": "xxx",
-    "status": "Saatavilla"
-  },
-  {
-    "id": "a7",
+    "id": "a4",
     "name": "Titi",
     "type": "Hiiri",
     "age": 0,
     "breed": "Afrikkalainen kääpiöhiiri",
     "description": "Pieni ja nopea, adoptoidaan vain pariskuntana.",
-    "imageUrl": "xxx",
+    "imageUrl": "https://hiiret.fi/pics/afrikka01.jpg",
     "status": "Saatavilla"
   },
   {
-    "id": "a8",
-    "name": "Roan",
-    "type": "Koira",
-    "age": 4,
-    "breed": "Bullterrieri",
-    "description": "Vahva ja uskollinen, vaatii tiukat rajat ja johdonmukaisen koulutuksen.",
-    "imageUrl": "xxx",
-    "status": "Saatavilla"
-  },
-  {
-    "id": "a9",
+    "id": "a5",
     "name": "Lumi",
     "type": "Kissa",
     "age": 8,
     "breed": "Siperiankissa",
     "description": "Erittäin pitkäturkkainen, vaatii päivittäisen harjauksen. Sopii allergikoille.",
-    "imageUrl": "xxx",
+    "imageUrl": "https://www.kissarodut.fi/wp-content/uploads/2023/06/siperiankissa.jpg",
     "status": "Varattu"
   },
   {
-    "id": "a10",
+    "id": "a6",
     "name": "Zoey",
     "type": "Lisko",
     "age": 2,
     "breed": "Parta-agama",
     "description": "Tarvitsee lämpimän terraarion ja UVB-valon. Helppohoitoinen harrastelijan lisko.",
-    "imageUrl": "xxx",
-    "status": "Saatavilla"
-  },
-  {
-    "id": "a11",
-    "name": "Gina",
-    "type": "Koira",
-    "age": 1,
-    "breed": "Mäyräkoira",
-    "description": "Nuori ja innokas, rakastaa kaivamista ja nuuskimista. Täynnä elämäniloa!",
-    "imageUrl": "xxx",
-    "status": "Saatavilla"
-  },
-  {
-    "id": "a12",
-    "name": "Leo",
-    "type": "Kissa",
-    "age": 6,
-    "breed": "Brittiläinen lyhytkarva",
-    "description": "Riippumaton ja rauhallinen. Ei pidä sylissä olemisesta, mutta nauttii läsnäolosta.",
-    "imageUrl": "xxx",
-    "status": "Saatavilla"
-  },
-  {
-    "id": "a13",
-    "name": "Chew",
-    "type": "Hiiri",
-    "age": 1,
-    "breed": "Gerbiili",
-    "description": "Pienet gerbiilit, adoptoidaan yhdessä parinsa kanssa.",
-    "imageUrl": "xxx",
+    "imageUrl": "https://www.akvaariolinna.fi/storage/editor_files/Materiaalit/Sis%C3%A4lt%C3%B6sivujen%20kuvat/Hoito%20ohjeet/Parta-agama%203.jpg",
     "status": "Saatavilla"
   }
 ]
