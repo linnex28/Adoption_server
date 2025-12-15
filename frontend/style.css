@@ -14,7 +14,8 @@ header {
     color: #2E6C7B;
     font-size: 37px;
     margin-bottom: 20px;
-    padding: 35px;
+    padding: 27px;
+    background-color: #77CBDA;
 }
 
 body {
@@ -26,6 +27,10 @@ body {
 
 h1, h2, h3, h4 {
     color: #2E6C7B
+}
+
+#otsikko {
+    padding: 35px;
 }
 
 footer {
@@ -40,6 +45,10 @@ footer {
     grid-template-columns: repeat(3, 1fr); /*show three animal cards on one row*/
     column-gap: 20px;
     row-gap: 40px;
+}
+
+/*get #animal-list and #otsikko to start at the same place*/
+.container {
     max-width: 900px;
     justify-items: center;
     margin: 0 auto;
@@ -74,15 +83,16 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-    .animal-card {
-        width: 85%;
-    }
 
     #animal-list {
-        grid-template-columns: 1fr; /*show animal cards on one column*/    
+        grid-template-columns: 1fr; /*show animal cards on one column*/ 
+        max-width: 100%;
+        justify-items: center;
     }
-
     header {
         font-size: 28px;
+    }
+    #otsikko {
+        font-size: 23px;
     }
 }
