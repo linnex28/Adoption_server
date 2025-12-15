@@ -7,10 +7,13 @@ server.use(express.json());
 const adoptionData = require('./adoptiondata.json');
 
 // read adoptiondata and parse it
-function readAdoptionData() {
+async function readAdoptionData() {
     try {
-        const data = fs.readFile(adoptionData, 'utf8');
-        return JSON.parse(data);
+        // "await" makes server wait until file reading is done
+        const dataString = await fs.readFile(adoptionData, 'utf8');
+        // convert string to js object
+        const data = JSON.parse(dataString)
+        return data;
     } catch (error) {
         return "error reading adoption data";
     }
@@ -18,9 +21,9 @@ function readAdoptionData() {
 
 // convert js object to string and writes it to adoptiondata.json
 // needed to save new adoptions to json file
-function writeAdoptionData(data) {
+async function writeAdoptionData(data) {
     const jsonData = JSON.stringify(data, null, 2);
-    fs.writeFile(adoptionData, jsonData, 'utf8');
+    await fs.writeFile(adoptionData, jsonData, 'utf8');
 }
 
 server.get('/adoptions', (req, res) => {
