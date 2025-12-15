@@ -1,0 +1,132 @@
+[
+  {
+    "id": "a1",
+    "name": "Nuget",
+    "type": "Kissa",
+    "age": 2,
+    "breed": "Bengali",
+    "description": "Iloinen ja leikkisä kissa. Soveltuu rauhalliseen kotiin.",
+    "imageUrl": "xxx",
+    "status": "Saatavilla"
+  },
+  {
+    "id": "a2",
+    "name": "Jaden",
+    "type": "Koira",
+    "age": 9,
+    "breed": "Labradorinnoutaja",
+    "description": "Rauhallinen vanhempi herra, nauttii pitkistä kävelyistä ja rapsutuksista. Ei sovellu pieniin asuntoihin.",
+    "imageUrl": "xxx",
+    "status": "Saatavilla"
+  },
+  {
+    "id": "a3",
+    "name": "Tikru",
+    "type": "Kissa",
+    "age": 1,
+    "breed": "Ocicat",
+    "description": "Hyvin sosiaalinen ja utelias nuori kissa, tarvitsee toisen kissan kaveriksi.",
+    "imageUrl": "xxx",
+    "status": "Varattu"
+  },
+  {
+    "id": "a4",
+    "name": "Alec",
+    "type": "Koira",
+    "age": 2,
+    "breed": "Bordercollie",
+    "description": "Erittäin energinen, tarvitsee paljon aktiviteetteja ja paimennustyötä. Vaatii kokeneen omistajan.",
+    "imageUrl": "xxx",
+    "status": "Saatavilla"
+  },
+  {
+    "id": "a5",
+    "name": "Mimi",
+    "type": "Lintu",
+    "age": 5,
+    "breed": "Harmaapapukaija",
+    "description": "Älykäs ja puhelias lintu, tarvitsee paljon tilaa ja virikkeitä.",
+    "imageUrl": "xxx",
+    "status": "Saatavilla"
+  },
+  {
+    "id": "a6",
+    "name": "Sonya",
+    "type": "Kissa",
+    "age": 12,
+    "breed": "Persialainen",
+    "description": "Sydämellinen seniori, joka haluaa vain nukkua ja syödä. Erinomainen sylikissa.",
+    "imageUrl": "xxx",
+    "status": "Saatavilla"
+  },
+  {
+    "id": "a7",
+    "name": "Titi",
+    "type": "Hiiri",
+    "age": 0,
+    "breed": "Afrikkalainen kääpiöhiiri",
+    "description": "Pieni ja nopea, adoptoidaan vain pariskuntana.",
+    "imageUrl": "xxx",
+    "status": "Saatavilla"
+  },
+  {
+    "id": "a8",
+    "name": "Roan",
+    "type": "Koira",
+    "age": 4,
+    "breed": "Bullterrieri",
+    "description": "Vahva ja uskollinen, vaatii tiukat rajat ja johdonmukaisen koulutuksen.",
+    "imageUrl": "xxx",
+    "status": "Saatavilla"
+  },
+  {
+    "id": "a9",
+    "name": "Lumi",
+    "type": "Kissa",
+    "age": 8,
+    "breed": "Siperiankissa",
+    "description": "Erittäin pitkäturkkainen, vaatii päivittäisen harjauksen. Sopii allergikoille.",
+    "imageUrl": "xxx",
+    "status": "Varattu"
+  },
+  {
+    "id": "a10",
+    "name": "Zoey",
+    "type": "Lisko",
+    "age": 2,
+    "breed": "Parta-agama",
+    "description": "Tarvitsee lämpimän terraarion ja UVB-valon. Helppohoitoinen harrastelijan lisko.",
+    "imageUrl": "xxx",
+    "status": "Saatavilla"
+  },
+  {
+    "id": "a11",
+    "name": "Gina",
+    "type": "Koira",
+    "age": 1,
+    "breed": "Mäyräkoira",
+    "description": "Nuori ja innokas, rakastaa kaivamista ja nuuskimista. Täynnä elämäniloa!",
+    "imageUrl": "xxx",
+    "status": "Saatavilla"
+  },
+  {
+    "id": "a12",
+    "name": "Leo",
+    "type": "Kissa",
+    "age": 6,
+    "breed": "Brittiläinen lyhytkarva",
+    "description": "Riippumaton ja rauhallinen. Ei pidä sylissä olemisesta, mutta nauttii läsnäolosta.",
+    "imageUrl": "xxx",
+    "status": "Saatavilla"
+  },
+  {
+    "id": "a13",
+    "name": "Chew",
+    "type": "Hiiri",
+    "age": 1,
+    "breed": "Gerbiili",
+    "description": "Pienet gerbiilit, adoptoidaan yhdessä parinsa kanssa.",
+    "imageUrl": "xxx",
+    "status": "Saatavilla"
+  }
+]
