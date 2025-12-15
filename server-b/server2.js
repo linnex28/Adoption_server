@@ -3,6 +3,8 @@ const fs = require("fs");
 const server = express();
 const PORT = 8000;
 server.use(express.json());
+const cors = require('cors');
+server.use(cors());
 
 const adoptionData = require('./adoptiondata.json');
 
