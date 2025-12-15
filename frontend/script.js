@@ -118,24 +118,18 @@ function setupAdoptionForm() {
 
         try {
             // send data to server B as POST req
-            const response = await fetch(ADOPTIONS_URL, {
+            const response = await fetch(API_adopt_url, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             });
 
-            const result = await response.json();
-
             if (response.ok) {
-                // sent successfully
-                formMessage.textContent = `Hakemus lähetetty onnistuneesti! ID: ${result.applicationId}. Otamme sinuun yhteyttä pian.`;
-                form.reset(); // reset form
-                
-                // reload animal details to reflect changes
-                loadAnimalDetails();
-
+                // sent successfully > redirect to thanks.html
+                window.location.href = 'thanks.html';
             } else {
                 // sending was not successful
+                const result = await response.json();
                 formMessage.textContent = `Virhe hakemuksen lähetyksessä: ${result.error || response.statusText}`;
             }
 
