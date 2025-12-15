@@ -11,7 +11,7 @@ function createAnimalCards(animalsData) {
 
             const image = document.createElement('img');
             image.src = animal.imageUrl || 'favicon.ico'; // placeholder image if original  isn't available
-            image.alt = `Image of an animal whose breed is: ${animal.breed}`;
+            image.alt = `Kuva eläimestä, jonka rotu on: ${animal.breed}`;
 
             const name = document.createElement('h3');
             name.textContent = animal.name;
