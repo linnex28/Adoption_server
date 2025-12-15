@@ -11,11 +11,20 @@ darker beige: #998B78
 
 */
 header {
-    color: #2E6C7B
+    color: #2E6C7B;
+    font-size: 37px;
+    margin-bottom: 20px;;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        font-size: 28px;
+    }
+    
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Courier", "Lucida Console", monospace;
     margin: 0;
     padding: 35px;
     background-color: #B3EBF2;
@@ -30,4 +39,51 @@ footer {
     padding: 2px;
     background-color: #77CBDA;
     color: white;
+}
+
+#animal-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*show three animal cards on one row*/
+    column-gap: 0px;
+    row-gap: 40px;
+    justify-items: center;
+
+}
+
+.animal-card {
+    border: 2px solid #998B78;
+    background-color: #D4CAB0;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px;
+    text-align: center;
+    display: inline-block;
+    width: 220px;
+}
+
+.animal-card img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid #998B78;
+}
+
+.animal-card a {
+    text-decoration: none;
+    color: white;
+    background-color: #4A9DAE;
+    padding: 2%;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .animal-card {
+        width: 180px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #animal-list {
+        grid-template-columns: 1fr; /*show animal cards on top of each other*/    
+    }
 }
