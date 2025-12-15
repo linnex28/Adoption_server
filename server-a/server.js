@@ -22,6 +22,37 @@ function readAnimalData() {
     }
 }
 
+function writeAnimalData(data) {
+    try {
+        const jsonData = JSON.stringify(data, null, 2);
+        fs.writeFileSync(ANIMALS_DATA_FILE, jsonData, 'utf8');
+        } catch (error) {
+            console.error("Error writing updated data:", error);
+    }
+}
+
+// write updated animal data to data.json file
+server.put('/animals/:id/status', (req, res) => {
+    const animalId = req.params.id;
+    const newStatus = req.body.status;
+
+    const animals = readAnimalData();
+    const animalIndex = animals.findIndex(a => a.id === animalId);
+
+    if (animalIndex === -1) {
+        return res.status(404).json({ error: 'animal not found to update' });
+    }
+
+    // find the animal and update its status
+    animals[animalIndex].status = newStatus;
+    
+    // write updates to data,json
+    writeAnimalData(animals);
+
+    // respond
+    res.json({ message: `Animal ${animalId} status updated to: ${newStatus}` });
+});
+
 // ssend all animals to frontend (index.html)
 server.get('/animals', (req, res) => {
     const animals = readAnimalData();

@@ -4,6 +4,7 @@ const server = express();
 const PORT = 8000;
 const cors = require('cors');
 const path = require('path');
+const API_server_a_URL = 'http://localhost:3000';
 
 const DATA_FILE = path.join(__dirname, 'adoptiondata.json');
 
@@ -45,15 +46,44 @@ server.get('/adoptions', (req, res) => {
     res.json(adoptionData);
 });
 
-server.post('/adoptions', (req, res) => {
+server.post('/adoptions', async (req, res) => {
     const newApplication = req.body;
     
     // read existing adoption applications
     const existingAdoptions = readAdoptionData();
     
+    const animalId = newApplication.animalId;
+
+    // check with server A if animal is already reserved
+    try {
+        const animalStatusResponse = await fetch(`${API_server_a_URL}/animals/${animalId}`);
+        
+        if (!animalStatusResponse.ok) { // if response not ok, return error
+            return res.status(404).json({ error: 'Animal not found in server A' });
+        }
+        
+        const animalData = await animalStatusResponse.json();
+        
+        // check if the animal is already reserved
+        if (animalData.status === 'Varattu') {
+            return res.status(409).json({ 
+                error: 'Eläin on jo varattu', 
+            });
+        }
+    } catch (error) {
+        console.error("Error cheking server A status:", error);
+        return res.status(500).json({ error: 'Server error when trying to check status' });
+    }
+
+    const updateResponse = await fetch(`${API_server_a_URL}/animals/${newApplication.animalId}/status`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ status: 'Varattu' }) // send new status
+    });
+
     // create new ID
     newApplication.applicationId = Date.now().toString();
-    newApplication.status = 'Pending';
+    newApplication.status = 'Varattu';
     
     // add new application to table
     existingAdoptions.push(newApplication);
