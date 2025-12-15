@@ -46,6 +46,7 @@ server.get('/adoptions', (req, res) => {
     res.json(adoptionData);
 });
 
+// POST new adoption application
 server.post('/adoptions', async (req, res) => {
     const newApplication = req.body;
     
@@ -75,20 +76,21 @@ server.post('/adoptions', async (req, res) => {
         return res.status(500).json({ error: 'Server error when trying to check status' });
     }
 
+    // update animal status in server A to 'Varattu'
     const updateResponse = await fetch(`${API_server_a_URL}/animals/${newApplication.animalId}/status`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ status: 'Varattu' }) // send new status
     });
 
-    // create new ID
+    // create new ID for application
     newApplication.applicationId = Date.now().toString();
     newApplication.status = 'Varattu';
     
     // add new application to table
     existingAdoptions.push(newApplication);
     
-    // write updated applications back to file
+    // write updated applications back to file adoptiondata.json
     writeAdoptionData(existingAdoptions);
 
     // send response back to frontend

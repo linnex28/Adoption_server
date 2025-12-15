@@ -8,7 +8,7 @@ const PORT = 3000;
 server.use(express.json());
 server.use(cors());
 
-const animalData = require('./data.json'); // (animal data created with the help of AI)
+const animalData = require('./data.json'); // (animal data created with the help of AI) duplicate ?
 const ANIMALS_DATA_FILE = path.join(__dirname, 'data.json');
 
 // read animal data from data.json file
@@ -32,6 +32,7 @@ function writeAnimalData(data) {
 }
 
 // write updated animal data to data.json file
+// this is similar to POST /animals/:id/adopt
 server.put('/animals/:id/status', (req, res) => {
     const animalId = req.params.id;
     const newStatus = req.body.status;
@@ -73,6 +74,7 @@ server.get('/animals/:id', (req, res) => {
     }
 });
 
+// duplicate ??
 server.get('/animals', (req, res) => {
   res.json(animalData);
 });
@@ -80,15 +82,15 @@ server.get('/animals', (req, res) => {
 // search animal by id
 server.get('/animals/:id', (req, res) => {
     const animalId = req.params.id;
-    const animals = fetchAnimals(); // Funktio, joka lukee kaikki eläimet
+    const animals = fetchAnimals(); // read animal data
 
-    // Etsi vastaava eläin
+    // find animal by id
     const animal = animals.find(a => a.id === animalId); 
 
     if (animal) {
-        res.json(animal); // LÖYTYI: Palauta objekti
+        res.json(animal); // return animal data if found
     } else {
-        res.status(404).json({ error: 'Eläintä ei löydy tällä ID:llä.' }); // EI LÖYTYNYT
+        res.status(404).json({ error: 'Eläintä ei löydy tällä ID:llä.' });
     }
 });
 
