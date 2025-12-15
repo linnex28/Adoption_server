@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" sizes="32x32" href="favicon.ico">
+        <meta charset="UTF-8">
+        <title>Eläimen tiedot</title>
+        <link rel="stylesheet" href="style.css"> <!-- style CSS -->
+    </head>
+<body>
+    <header>
+        <a href="index.html" class="back-link">Adoptoitavat eläimet</a>
+    </header>
+
+    <main class="container">
+        <div id="animal-details"></div>
+
+        <section id="form-section">
+            <h2>Haluaisitko adoptoida?</h2>
+            <form id="adoption-form">
+                <input type="hidden" id="animal-id-input" name="animalId" value="">
+                
+                <label for="applicantName">Nimi:</label>
+                <input type="text" id="applicantName" name="applicantName" required>
+
+                <label for="applicantEmail">Sähköposti:</label>
+                <input type="email" id="applicantEmail" name="applicantEmail" required>
+
+                <button type="submit" id="submit-button">Lähetä hakemus</button>
+            </form>
+            
+            <p id="form-message" role="alert"></p>
+        </section>
+
+    </main>
+
+    <!-- the footer -->
+    <footer>
+        <p><small>Copyright &copy <a>LR 2025</a></small></p>
+    </footer>
+     
+    <script src="script.js"></script>
+</body>
+</html>
