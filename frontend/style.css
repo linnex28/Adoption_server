@@ -1,0 +1,33 @@
+/* 
+Colors used:
+
+pastel blue: #B3EBF2
+darker: #77CBDA
+darker: #4A9DAE
+darkest blue: #2E6C7B
+
+beige: #D4CAB0
+darker beige: #998B78
+
+*/
+header {
+    color: #2E6C7B
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 35px;
+    background-color: #B3EBF2;
+}
+
+h1, h2, h3, h4 {
+    color: #2E6C7B
+}
+
+footer {
+    text-align: center;
+    padding: 2px;
+    background-color: #77CBDA;
+    color: white;
+}
