@@ -2,15 +2,8 @@ const API_url = 'http://localhost:3000/animals';
 // container for animal cards
 const animalList = document.getElementById('animal-list');
 
-async function fetchAnimals() {
-    try {
-        const response = await fetch(`${API_url}`);
-        if (!response.ok) {
-            return "API request failed";
-        }
-        const animals = await response.json();
-
-        displayAnimals.forEach(animal => {
+function createAnimalCards(animalsData) {
+    displayAnimals.forEach(animal => {
             const card = document.createElement('div');
             card.className = 'animal-card';
 
@@ -24,8 +17,9 @@ async function fetchAnimals() {
             const info = document.createElement('p');
             info.textContent = `Breed: ${animal.breed}, Age: ${animal.age} years`;
 
-            const buttom = document.createElement('button');
+            const buttom = document.createElement('a');
             button.href = `animal.html?id=${animal.id}`;
+            button.className = 'details-button';
             button.textContent = 'Get details';
 
             card.appendChild(image);
@@ -34,6 +28,18 @@ async function fetchAnimals() {
             card.appendChild(button);
             animalList.appendChild(card);
         });
+}
+
+async function fetchAnimals() {
+    try {
+        const response = await fetch(`${API_url}`);
+        if (!response.ok) {
+            return "API request failed";
+        }
+        const animals = await response.json();
+
+        createAnimalCards(animalsData);
+        
     } catch (error) {
         console.error('Error fetching animals:', error);
     }
