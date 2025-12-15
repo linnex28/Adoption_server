@@ -13,20 +13,22 @@
     </header>
 
     <main class="container">
+        <hr class="line">
         <div id="animal-details-container"></div>
-
+        <hr class="line">
         <section id="form-section">
             <h2>Haluaisitko adoptoida?</h2>
+            <h4>Täytä lomake:</h4>
             <form id="adoption-form">
                 <input type="hidden" id="animal-id-input" name="animalId" value="">
-                
+                <br>
                 <label for="applicantName">Nimi:</label>
                 <input type="text" id="applicantName" name="applicantName" required>
-
+                <br>
                 <label for="applicantEmail">Sähköposti:</label>
                 <input type="email" id="applicantEmail" name="applicantEmail" required>
-
-                <button type="submit" id="submit-button">Lähetä hakemus</button>
+                <br>
+                <button type="submit" id="submit-button">Lähetä hakemus!</button>
             </form>
             
             <p id="form-message" role="alert"></p>

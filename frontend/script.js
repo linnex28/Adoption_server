@@ -71,7 +71,7 @@ async function getAnimalDetails() {
         const response = await fetch(`${API_base_url}/animals/${animalId}`);
         
         if (!response.ok) {
-            container.innerHTML = `<h2>eläintä id:llä ${animalId} ei löytynyt.</h2>`;
+            container.innerHTML = `<h4>HUOM! eläintä id:llä "${animalId}" ei löytynyt.</h4>`;
             return;
         }
         
@@ -114,7 +114,7 @@ function setupAdoptionForm() {
         const data = Object.fromEntries(formData.entries());
         
         // status for server B
-        data.statusChangeRequested = "Pending"; 
+        data.statusChangeRequested = "Varattu"; 
 
         try {
             // send data to server B as POST req
